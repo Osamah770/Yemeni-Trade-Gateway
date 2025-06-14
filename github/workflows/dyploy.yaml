@@ -1,0 +1,35 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main # أو أي فرع آخر تريد تشغيل النشر منه
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # الخطوة 1: استنساخ المستودع
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # الخطوة 2: تثبيت التبعيات
+      - name: Install dependencies
+        run: npm install
+
+      # الخطوة 3: بناء المشروع
+      - name: Build project
+        run: npm run build
+
+      # الخطوة 4: نشر المشروع إلى Vercel
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          github-comment: true
