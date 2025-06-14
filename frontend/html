@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بوابة اليمن التجارية</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#products">المنتجات</a></li>
+        <li><a href="#payment">الدفع</a></li>
+        <li><a href="#profile">حسابي</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>بوابة اليمن التجارية</h1>
+    <p>منصة تجارية شاملة لجميع احتياجاتك</p>
+  </section>
+
+  <section id="products">
+    <h2>منتجاتنا:</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="car.jpg" alt="سيارة">
+        <h3>سيارات</h3>
+        <p>اشترِ سيارتك الجديدة الآن!</p>
+        <button>التفاصيل</button>
+      </div>
+      <!-- أضف المزيد من المنتجات -->
+    </div>
+  </section>
+
+  <section id="payment">
+    <h2>خيارات الدفع:</h2>
+    <div class="payment-options">
+      <div class="option">
+        <img src="credit-card.png" alt="بطاقة ائتمانية">
+        <p>بطاقات الائتمان</p>
+      </div>
+      <div class="option">
+        <img src="blockchain.png" alt="بلوكشين">
+        <p>بلوكشين (Chain Pi)</p>
+      </div>
+      <!-- أضف المزيد من الخيارات -->
+    </div>
+  </section>
+
+  <section id="profile">
+    <h2>حسابي:</h2>
+    <form>
+      <label for="username">اسم المستخدم:</label>
+      <input type="text" id="username" name="username">
+
+      <label for="email">البريد الإلكتروني:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="password">كلمة المرور:</label>
+      <input type="password" id="password" name="password">
+
+      <button type="submit">تسجيل الدخول</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2023 بوابة اليمن التجارية</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
